@@ -1,0 +1,35 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "scripts/background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "styles/content.css" ],
+      "js": [ "scripts/content.js" ],
+      "matches": [ "*://studio.youtube.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "css": [ "styles/content.css" ],
+      "js": [ "scripts/content.js" ],
+      "matches": [ "*://*.youtube.com/*" ]
+   } ],
+   "description": "AI assistant to help content creators develop and manage their YouTube channel with AI support.",
+   "host_permissions": [ "https://*.youtube.com/*", "https://youtube101.id/*", "https://generativelanguage.googleapis.com/*" ],
+   "icons": {
+      "128": "assets/icon128.png",
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtuWYhh0epVjYYFW9cJL+4JENG4FCgYLLWIihFweN6zuWOOF+IMJMZ/v5dkGmBUhV+lQI7Qx7ret3L7wU0Pk0f1ny3+ELZoYvOED13pVp7sCMjZ8x/0C60UEMP7UcvFLABqKO3AJVsyselFXGJzdlhER2gSodtGivbAqUFyNnM6gx8hHN99NBb1BhAlIXNw/F0Jph7HVjcDDCe57g3zCFqOXn45kFAcFziXZunL1CMmxCiI6Lr8xIQaOOYAeGiYskOi0kldVVUX04yPRLgqUCZUsDmmlUwDP3uJI7Zj5daXR1+Gp0/tt37hZ8zH17HURRANMZEdZFuP5VMsggSMhs8QIDAQAB",
+   "manifest_version": 3,
+   "name": "YouTube101 - Assistant",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ {
+      "matches": [ "https://www.youtube.com/*" ],
+      "resources": [ "assets/*" ]
+   } ]
+}

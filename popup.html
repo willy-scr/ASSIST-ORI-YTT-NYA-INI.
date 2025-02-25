@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube101 Assistant</title>
+    <link rel="stylesheet" href="styles/popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-wrapper">
+                    <img src="assets/logo_101.png" alt="YouTube101 Logo" width="43" height="43">
+                </div>
+                <div class="title-section">
+                    <h1>YouTube101 Assistant</h1>
+                    <span class="subtitle">
+                        by <a href="https://youtube.com/bangtutorial" target="_blank" class="channel-link">
+                            <img src="assets/avatar.jpg" class="channel-avatar" alt="Bang Tutorial">
+                            <span>Bang Tutorial</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="card api-key-section">
+                <div class="input-label">
+                    <label class="setting-label">
+                        <i class="ti ti-key"></i>
+                        <span>Gemini API Key</span>
+                    </label>
+                </div>
+                <div class="api-input-wrapper">
+                    <div class="api-input-container">
+                        <input type="password" id="gemini-api" placeholder="Masukan API key Gemini">
+                        <button id="toggle-api" class="eye-button">
+                            <i class="ti ti-eye"></i>
+                        </button>
+                    </div>
+                    <button id="save-api" class="primary-button">
+                        <span>Simpan</span>
+                    </button>
+                </div>
+                <div class="api-help">
+                    <span>API Key Gemini <a href="https://makersuite.google.com/app/apikey" target="_blank">ambil di sini <i class="ti ti-external-link"></i></a></span>
+                </div>
+            </div>
+
+            <div class="card settings-card">
+                <div class="setting-item">
+                    <div class="setting-label-group">
+                        <label class="setting-label">
+                            <i class="ti ti-message-2"></i>
+                            <span>Gaya Bahasa</span>
+                        </label>
+                        <div class="tooltip-wrapper">
+                            <i class="ti ti-info-circle info-icon"></i>
+                            <div class="tooltip">Gaya bahasa yang akan digunakan pada balasan komentar</div>
+                        </div>
+                    </div>
+                    <select id="language-style" class="select-style">
+                        <option value="standar">Standar</option>
+                        <option value="santai">Santai</option>
+                        <option value="gaul">Gaul</option>
+                        <option value="jaksel">Jaksel</option>
+                        <option value="formal">Formal</option>
+                    </select>
+                </div>
+                
+                <div class="setting-item">
+                    <div class="setting-label-group">
+                        <label class="setting-label">
+                            <i class="ti ti-heart"></i>
+                            <span>Auto Love Komen</span>
+                        </label>
+                        <div class="tooltip-wrapper">
+                            <i class="ti ti-info-circle info-icon"></i>
+                            <div class="tooltip">Love otomatis setiap balas komentar</div>
+                        </div>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="auto-love">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <div class="setting-label-group">
+                        <label class="setting-label">
+                            <i class="ti ti-shield-lock"></i>
+                            <span>Spam Detector</span>
+                            <span class="experimental-badge">beta</span>
+                        </label>
+                        <div class="tooltip-wrapper">
+                            <i class="ti ti-info-circle info-icon"></i>
+                            <div class="tooltip">Deteksi otomatis komentar spam dengan karakter mencurigakan</div>
+                        </div>
+                    </div>
+                    <label class="toggle">
+                        <input type="checkbox" id="spam-detector">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="setting-item" style="padding: 0px 0px 8px 0px !important">
+                    <div class="textarea-container">
+                        <textarea id="suspiciousWords" readonly placeholder="Daftar kata mencurigakan akan muncul di sini..."></textarea>
+                        <button id="copyButton" class="copy-button">
+                            <i class="ti ti-copy"></i>
+                            <div class="copy-tooltip">Salin Kata</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="creator-text">
+                    <p>From Creator for Creator</p>
+                </div>
+            </div>
+            <div class="tip-button-wrapper">
+                <a href="https://youtube101.id/donate/" target="_blank" class="tip-button">
+                    <i class="ti ti-gift"></i>
+                    <span>Kirim Tip</span>
+                </a>
+                <div class="tip-tooltip">Thank you sudah bantu support 🙏</div>
+            </div>
+        </div>
+        <div class="update-container" id="updateContainer" style="display: none;">
+            <div class="update-wrapper">
+                <a href="https://youtube101.id/extension/update" target="_blank" class="update-button">Update</a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,759 @@
+:root {
+    --primary-color: #0055FF;
+    --primary-hover: #0140d2;
+    --primary-light: rgba(18, 90, 255, 0.1);
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --bg-color: #FFFFFF;
+    --border-color: #E5E7EB;
+    --input-bg: #F9FAFB;
+    --success-color: #0BBF6F;
+    --card-shadow: rgba(0, 0, 0, 0.15) 0px 2px 15px;
+}
+
+body {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: #1a1c1e;
+    color: #fff;
+}
+
+/* Update all text elements to use Inter font */
+h1, h2, p, span, input, button, a {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    margin-bottom: 24px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-wrapper {
+    width: 40px;
+    height: 40px;
+    background: #167bff;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-wrapper i {
+    color: white;
+    font-size: 24px;
+}
+
+.title-section h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 3px !important;
+    color: #fff;
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: #a1a1aa;
+}
+
+.creator-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary-light);
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.creator-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.creator-text p {
+    margin: 0;
+}
+
+/* Settings Section */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.section-title h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.api-key-section {
+    background: white;
+    border-radius: 13px;
+    padding: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.input-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+    color: #fff;
+}
+
+.api-input-wrapper {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 13px;
+}
+
+.api-input-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 4px 2px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.api-input-container:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.input-icon {
+    color: var(--text-secondary);
+}
+
+input[type="password"],
+input[type="text"] {
+    flex: 1;
+    padding: 4px 8px; /* Reduced from 6px 8px */
+    border: none;
+    background: transparent;
+    font-size: 12px; /* Reduced from 14px */
+    outline: none;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 8px; /* Reduced from 13px */
+    background: #1a1c1e;
+    border: 1px solid #3f3f3f;
+    border-radius: 8px;
+    color: #282a2d;
+    font-size: 13px; /* Reduced from 14px */
+}
+
+input:focus {
+    outline: none;
+    border-color: #167bff;
+}
+
+/* Update input placeholder font */
+input::placeholder {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove transitions and animations from primary button */
+.primary-button {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0055FF;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Reduced from 13px 16px */
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Update button text */
+.primary-button span,
+.tip-button span {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove hover effects from primary button */
+.primary-button:hover {
+    background: #0047d4;
+}
+
+/* Center align API help text */
+.api-help {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 13px;
+    color: #a1a1aa;
+    text-align: center;
+}
+
+.api-help a {
+    color: #1696ff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.api-help a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #3f3f3f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a1a1aa;
+    font-size: 13px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.version-badge {
+    background: #4a4a4a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.card {
+    background: #282a2d;
+    border-radius: 13px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #3f3f3f;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Remove transitions from tip button */
+.tip-button {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 6px;
+    background: #d2f5df;
+    border-radius: 8px;
+    color: #008441;
+    text-decoration: none;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* Remove hover effects from tip button */
+.tip-button:hover {
+    background: #b3dfc4;
+}
+
+.tip-button i {
+    font-size: 16px;
+}
+
+/* Update eye button styles */
+.eye-button {
+    background: white;
+    border: none;
+    padding: 4px; /* Reduced from 7px */
+    color: #a1a1aa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 13px; /* Added to make icon smaller */
+}
+
+.eye-button:hover {
+    color: white;
+    background: #3f3f3f;
+}
+
+/* Adjust spacing around the input section */
+.api-input-wrapper {
+    margin-bottom: 13px;
+}
+
+/* Add these styles for messages */
+.message {
+    margin-top: 13px;
+    padding: 8px 13px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.message.success {
+    background: rgba(22, 255, 92, 0.1);
+    color: #00cb55;
+}
+
+.message.error {
+    background: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+}
+
+.message i {
+    font-size: 16px;
+}
+
+/* Loading animation for save button */
+.ti-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update save button disabled state */
+.primary-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Add these new styles */
+.settings-card {
+    padding: 5px 16px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.setting-item:not(:last-child) {
+    border-bottom: 1px solid #3f3f3f;
+}
+
+.setting-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.select-style {
+    background: #1a1c1e;
+    border: 1px solid #3f3f3f;
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+/* Toggle Switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 32px;  /* Reduced from 44px */
+    height: 18px; /* Reduced from 24px */
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3f3f3f;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;  /* Reduced from 18px */
+    width: 14px;   /* Reduced from 18px */
+    left: 2px;     /* Adjusted from 3px */
+    bottom: 2px;   /* Adjusted from 3px */
+    background-color: white;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: #167bff;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(14px); /* Adjusted from 20px */
+}
+
+.channel-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #167bff;
+    text-decoration: none;
+}
+
+.channel-link:hover {
+    text-decoration: none;
+}
+
+.channel-avatar {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+a.channel-link{
+    background: #ffffff2b;
+    padding: 3px 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #dfdfdf;
+    text-decoration: none !important;
+}
+a.channel-link:hover{
+    background: #ffffff49;
+    text-decoration: none !important;
+}
+
+.setting-label-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tooltip-wrapper {
+    position: relative;
+}
+
+.info-icon {
+    font-size: 14px;
+    color: #63636d;
+    cursor: help;
+}
+
+.info-icon:hover {
+    color: #4c4f54;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(100% + 10px);
+    width: 150px;
+    background: #101111;
+    color: #fff;
+    padding: 8px 13px;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: 1px solid #3f3f3f;
+    z-index: 10;
+    text-align: center;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #101111;
+}
+
+.tooltip-wrapper:hover .tooltip {
+    visibility: visible;
+}
+
+.tip-button-wrapper {
+    position: relative;
+    margin-left: 8px; 
+}
+
+.tip-tooltip {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 12px);
+    background: white;
+    color: #242629;
+    padding: 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    width: 202px; 
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+    text-align: right; 
+    line-height: 1.4;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.tip-tooltip::after {
+    content: '';
+    position: absolute;
+    right: 10px; 
+    top: 100%;
+    border: 6px solid transparent;
+    border-top-color: white;
+}
+
+.tip-button-wrapper:hover .tip-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tip-button {
+    background: linear-gradient(135deg, #9C27B0, #673AB7);
+    color: white;
+    border: 1px solid rgba(156, 39, 176, 0.3);
+}
+
+.tip-button:hover {
+    background: linear-gradient(135deg, #AB47BC, #7E57C2);
+    box-shadow: 0 3px 10px rgba(156, 39, 176, 0.2);
+}
+
+#suspiciousWords {
+  width: 93% !important;
+  min-height: 50px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+#suspiciousWords:focus {
+    outline: none;
+    border-color: #167bff;
+}
+
+
+.setting-item textarea#suspiciousWords {
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    padding: 8px;
+    border: 1px solid #3f3f3f;
+    border-radius: 8px;
+    font-size: 13px;
+    resize: vertical;
+    background-color: #1a1c1e;
+    color: #ffffff;
+    margin-top: 8px;
+    display: none; /* Hidden by default */
+}
+
+/* Show textarea when spam detector is enabled */
+#spam-detector:checked ~ textarea#suspiciousWords {
+    display: block;
+}
+
+.setting-item textarea#suspiciousWords::placeholder {
+    color: #63636d;
+}
+
+.experimental-badge {
+    background: rgba(156, 163, 175, 0.1);
+    color: #9CA3AF;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.textarea-container {
+    position: relative;
+    width: 100%;
+}
+
+.copy-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #9CA3AF;
+    transition: all 0.2s;
+}
+
+.copy-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.copy-button i {
+    font-size: 14px;
+}
+
+/* Show copy button when spam detector is enabled */
+#spam-detector:checked ~ .textarea-container .copy-button {
+    display: block;
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: #ffffff;
+    color: #1a1c1e;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+}
+
+.copy-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+
+.copy-button:hover .copy-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+button#copyButton {
+    display: none;
+}
+.update-container {
+    padding: 17px 5px 0px 5px;
+    margin-top: 15px;
+    border-top: 1px solid #3f3f3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.update-wrapper {
+    background: #3f3f3f;
+    border-radius: 5px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.update-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #a1a1aa;
+    font-size: 12px;
+}
+
+.update-content i {
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+
+.update-button {
+    padding: 2px 5px;
+    margin-left: 1px;
+    background: #108746;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.update-button:hover {
+    background: #0a6b3d;
+}
